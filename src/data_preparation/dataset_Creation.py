@@ -49,4 +49,4 @@ output_path = f"/home/soham/Project/NeuraPhrase/data/raw/{csvfile}"
 os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
 # Save the merged DataFrame to a CSV file
-merged_df.to_csv(output_path, index=False)
+merged_df.to_csv(output_path, index=False, escapechar='\\')
