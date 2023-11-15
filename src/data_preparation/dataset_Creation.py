@@ -1,7 +1,7 @@
 import os
 from datasets import load_dataset
 import pandas as pd
-
+'''
 # Taking dataset name and column name
 tempcsv = input("Enter Temporary csv file name: ")
 existCsv = f"/home/soham/Project/NeuraPhrase/data/raw/{tempcsv}"
@@ -19,8 +19,8 @@ column1 = dataset1["prompt"]
 column2 = dataset1["response"]
 column3 = dataset2[key][col1]
 column4 = dataset2[key][col2]
+'''
 
-"""
 # Load the datasets
 dataset1 = load_dataset("meta-math/MetaMathQA")
 dataset2 = load_dataset("vikp/textbook_quality_programming")
@@ -30,7 +30,7 @@ column1 = dataset1["train"]["query"]
 column2 = dataset1["train"]["response"]
 column3 = dataset2["train"]["topic"]
 column4 = dataset2["train"]["markdown"]
-"""
+
 
 # Create DataFrames for the desired columns
 df1 = pd.DataFrame({"prompt": column1, "response": column2})
