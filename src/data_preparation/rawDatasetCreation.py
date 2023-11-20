@@ -9,7 +9,7 @@ def process_first_code():
     dataset2 = load_dataset("vikp/textbook_quality_programming")
 
     # Define chunk size based on available memory
-    chunk_size = 1000  # You can adjust this based on your available memory
+    chunk_size = 500  # You can adjust this based on your available memory
 
     # Initialize an empty DataFrame for merged data
     merged_df = pd.DataFrame(columns=["prompt", "response"])
@@ -37,7 +37,7 @@ def process_first_code():
     csvfile = input("Enter new_csv File Name: ")
 
     # Specify the full path for saving the CSV file
-    output_path = f"/home/soham/Project/NeuraPhrase/data/raw/{csvfile}"
+    output_path = f"/home/soham/NeuraPhrase/data/raw/{csvfile}"
 
     # Ensure the directory exists, create it if needed
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
@@ -48,14 +48,14 @@ def process_first_code():
 def process_second_code():
     # Taking dataset name and column name
     tempcsv = input("Enter Temporary csv file name: ")
-    existCsv = f"/home/soham/Project/NeuraPhrase/data/raw/{tempcsv}"
+    existCsv = f"/home/soham/NeuraPhrase/data/raw/{tempcsv}"
     new_dataset = input("Enter New Dataset path: ")
     col1 = input("Enter prompt column name: ")
     col2 = input("Enter response column name: ")
     key = input("Enter key name: ")
 
     # Define chunk size based on available memory
-    chunk_size = 1000  # You can adjust this based on your available memory
+    chunk_size = 500  # You can adjust this based on your available memory
 
     # Load the datasets in chunks
     chunks1 = pd.read_csv(existCsv, chunksize=chunk_size)
@@ -85,7 +85,7 @@ def process_second_code():
     csvfile = input("Enter new_csv File Name: ")
 
     # Specify the full path for saving the CSV file
-    output_path = f"/home/soham/Project/NeuraPhrase/data/raw/{csvfile}"
+    output_path = f"/home/soham/NeuraPhrase/data/raw/{csvfile}"
 
     # Ensure the directory exists, create it if needed
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
