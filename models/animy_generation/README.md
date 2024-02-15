@@ -1,4 +1,4 @@
-# Anime Generation with StyleGAN2 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NK05bpmOpI0NRIpL9_11oXcpaQGt09cZ?usp=sharing)
+# Anime Generation with StyleGAN2 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1jMegxlKTdYEKqB0PKZkOmk5kc-3myPp7?usp=sharing)
 
 This repository contains an unoffical implementation of **StyleGAN2 for generating Anime Faces**. 
 
@@ -6,6 +6,28 @@ This repository contains an unoffical implementation of **StyleGAN2 for generati
   <img src="images/epoch_video.gif" width=600><br/>
   <i><b>Result</b></i>
 </p>
+
+## Requirements
+
+To install the required dependencies for this project use the following command : 
+
+```bash 
+pip3 install -r requirements.txt
+```
+
+This command will install the following python packages :
+
+```bash
+imageio==2.22.0
+matplotlib==3.5.3
+numpy==1.23.3
+opencv_python==4.6.0.66
+Pillow==9.4.0
+PyYAML==6.0
+torch==1.12.1
+torchvision==0.13.1
+tqdm==4.64.0
+```
 
 ## Dataset
 
@@ -41,7 +63,7 @@ python3 utils/epoch_video.py --images_path path\to\images\generated\at\each\epoc
 
 The **images generated at each epoch of training is in `images` directory** and **the pretrained model is avaiable in `saved_model` directory**.
 
-**Here is a demo Google Colab Notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1NK05bpmOpI0NRIpL9_11oXcpaQGt09cZ?usp=sharing) that showcases the capabilities of our StyleGAN2 implementation by using the trained model.**
+**Here is a demo Google Colab Notebook [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1jMegxlKTdYEKqB0PKZkOmk5kc-3myPp7?usp=sharing) that showcases the capabilities of our StyleGAN2 implementation by using the trained model.**
 
 ## Result
 
@@ -66,24 +88,3 @@ The following graph describes the generator loss and discriminator loss during t
   <img src="images/loss.png">
 </p>
 
-## Requirements
-
-To install the required dependencies for this project use the following command : 
-
-```bash 
-pip3 install -r requirements.txt
-```
-
-This command will install the following python packages :
-
-```bash
-imageio==2.22.0
-matplotlib==3.5.3
-numpy==1.23.3
-opencv_python==4.6.0.66
-Pillow==9.4.0
-PyYAML==6.0
-torch==1.12.1
-torchvision==0.13.1
-tqdm==4.64.0
-```
